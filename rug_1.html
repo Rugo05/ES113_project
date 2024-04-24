@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<h3> Welcome to the Electoral Bonds Visualisation site!</h3>
+	</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <body>
+        <form method="post" action="/a_1">
+                <label>Choose a parameter:</label>
+            <select name = "parameter" id = "parameter">
+                    <option value="Prefix">Prefix</option>
+                    <option value="Bond_Number">Bond_Number</option>
+                    <option value="Reference.No_(URN)">Reference.NO.</option>
+                    <option value="Date_of_Purchase">Date_of_Purchase</option>
+                    <option value="Date_of_Expiry">Date_of_Expiry</option>
+                    <option value="Name_of_Purchaser">Name_of_Purchaser</option>
+                    <option value="Date_of_Encashment">Date_of_Encashment</option>
+                    <option value="Name_of_the_Political_Party">Name_of_the_Political_Party</option>
+                <option value="Pay_Branch_Code">Pay_Branch_Code</option>
+                <option value="Issue_Branch_Code">Issue_Branch_Code</option>
+            </select>
+        <label>Enter parameter value:</label>
+                <input name="box" type="text" >
+                <button type="submit"> Submit</button>
+        </form>
+
+    <form method="post" action="/a_2">
+        <label>Name the company/indivisual for which data is needed:</label>
+        <input name="cmpny" type="text">
+        <button > Submit</button>
+    </form>
+    <form method="post" action="/a_3">
+        <label>Name the Political party for which data is needed:</label>
+        <select name = "party" id = "party">
+            <option value='ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM'>ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM</option>
+            <option value="BHARAT RASHTRA SAMITHI">BHARAT RASHTRA SAMITHI</option>
+            <option value="BHARATIYA JANATA PARTY">BHARATIYA JANATA PARTY</option>
+            <option value="PRESIDENT, ALL INDIA CONGRESS COMMITTEE">PRESIDENT, ALL INDIA CONGRESS COMMITTEE</option>
+            <option value="SHIVSENA">SHIVSENA</option>
+            <option value="TELUGU DESAM PARTY">TELUGU DESAM PARTY</option>
+            <option value="YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)">YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)</option>
+            <option value="DRAVIDA MUNNETRA KAZHAGAM (DMK)">DRAVIDA MUNNETRA KAZHAGAM (DMK)</option>
+            <option value="JANATA DAL ( SECULAR )">JANATA DAL ( SECULAR )</option>
+            <option value="NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH">NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH</option>
+            <option value='ALL INDIA TRINAMOOL CONGRESS'>ALL INDIA TRINAMOOL CONGRESS</option>
+            <option value="BIHAR PRADESH JANTA DAL(UNITED)">BIHAR PRADESH JANTA DAL(UNITED)</option>
+            <option value="RASHTRIYA JANTA DAL">RASHTRIYA JANTA DAL</option>
+            <option value="AAM AADMI PARTY">AAM AADMI PARTY</option>
+            <option value="ADYAKSHA SAMAJVADI PARTY">ADYAKSHA SAMAJVADI PARTY</option>
+            <option value="SHIROMANI AKALI DAL">SHIROMANI AKALI DAL</option>
+            <option value="JHARKHAND MUKTI MORCHA">JHARKHAND MUKTI MORCHA</option>
+            <option value="JAMMU AND KASHMIR NATIONAL CONFERENCE">JAMMU AND KASHMIR NATIONAL CONFERENCE</option>
+            <option value="BIJU JANATA DAL">BIJU JANATA DAL</option>
+            <option value="GOA FORWARD PARTY">GOA FORWARD PARTY</option>
+            <option value="MAHARASHTRAWADI GOMNTAK PARTY">MAHARASHTRAWADI GOMNTAK PARTY</option>
+            <option value="SIKKIM KRANTIKARI MORCHA">SIKKIM KRANTIKARI MORCHA</option>
+            <option value="JANASENA PARTY">JANASENA PARTY</option>
+            <option value="SIKKIM DEMOCRATIC FRONT">SIKKIM DEMOCRATIC FRONT</option>
+    </select>
+    <button > Visualise</button>
+    </form>
+
+    <form method="post" action="/a_4">
+        <label>Name the Political party for company/indivisual contribution data is needed:</label>
+        <select name = "party" id = "party">
+            <option value='ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM'>ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM</option>
+            <option value="BHARAT RASHTRA SAMITHI">BHARAT RASHTRA SAMITHI</option>
+            <option value="BHARATIYA JANATA PARTY">BHARATIYA JANATA PARTY</option>
+            <option value="PRESIDENT, ALL INDIA CONGRESS COMMITTEE">PRESIDENT, ALL INDIA CONGRESS COMMITTEE</option>
+            <option value="SHIVSENA">SHIVSENA</option>
+            <option value="TELUGU DESAM PARTY">TELUGU DESAM PARTY</option>
+            <option value="YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)">YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)</option>
+            <option value="DRAVIDA MUNNETRA KAZHAGAM (DMK)">DRAVIDA MUNNETRA KAZHAGAM (DMK)</option>
+            <option value="JANATA DAL ( SECULAR )">JANATA DAL ( SECULAR )</option>
+            <option value="NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH">NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH</option>
+            <option value='ALL INDIA TRINAMOOL CONGRESS'>ALL INDIA TRINAMOOL CONGRESS</option>
+            <option value="BIHAR PRADESH JANTA DAL(UNITED)">BIHAR PRADESH JANTA DAL(UNITED)</option>
+            <option value="RASHTRIYA JANTA DAL">RASHTRIYA JANTA DAL</option>
+            <option value="AAM AADMI PARTY">AAM AADMI PARTY</option>
+            <option value="ADYAKSHA SAMAJVADI PARTY">ADYAKSHA SAMAJVADI PARTY</option>
+            <option value="SHIROMANI AKALI DAL">SHIROMANI AKALI DAL</option>
+            <option value="JHARKHAND MUKTI MORCHA">JHARKHAND MUKTI MORCHA</option>
+            <option value="JAMMU AND KASHMIR NATIONAL CONFERENCE">JAMMU AND KASHMIR NATIONAL CONFERENCE</option>
+            <option value="BIJU JANATA DAL">BIJU JANATA DAL</option>
+            <option value="GOA FORWARD PARTY">GOA FORWARD PARTY</option>
+            <option value="MAHARASHTRAWADI GOMNTAK PARTY">MAHARASHTRAWADI GOMNTAK PARTY</option>
+            <option value="SIKKIM KRANTIKARI MORCHA">SIKKIM KRANTIKARI MORCHA</option>
+            <option value="JANASENA PARTY">JANASENA PARTY</option>
+            <option value="SIKKIM DEMOCRATIC FRONT">SIKKIM DEMOCRATIC FRONT</option>
+    </select>
+    <button > Visualise</button>
+    </form>
+    {% if a_4_data%}
+    <Table border = 1>
+    {% for item in a_4_data %}
+    <tr>
+        {% for i in range (2) %}
+        <td>{{ item[i] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </Table>
+    <form method="post" action="/a_5">
+        <label>Name the company/indivisual of which Party donation data is needed:</label>
+        <input name="cmpny" type="text">
+        <button > Submit</button>
+    </form>
+    {% if a_5_data%}
+    <Table border = 1>
+    {% for item in a_5_data %}
+    <tr>
+        {% for i in range (2) %}
+        <td>{{ item[i] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </Table>
+    <form method="post" action="/a_6">
+        <label>Do you want to see data for parties in a pie chart:</label>
+        <select name = "true" id = "true">
+            <option value='YES'>YES</option>
+            <option value='NO'>NO</option>
+        </select>
+        <button > Visualise</button>
+    </form>
+</html>

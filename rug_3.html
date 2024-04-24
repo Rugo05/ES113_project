@@ -1,0 +1,40 @@
+<html>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>      
+<div id ="bar">
+            <canvas id="myChart"></canvas>
+</div>
+    <Table border = 1>
+    {% if a_3_data%}
+        {% for item in a_3_data %}
+        <tr>
+            {% for i in range (2) %}
+            <td>{{ item[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </Table>
+    <script>
+        const x_axis = []
+        const y_axis = []
+        {% for item in a_3_data %}
+            x_axis.push('{{item[0]}}')
+            y_axis.push('{{item[1]}}')
+            {% endfor %}
+        new Chart("myChart", {
+            type: "bar",
+            data: 
+            {
+                labels: x_axis,
+                datasets: 
+                [{
+                    backgroundColor:"#937aa1",
+                    borderColor: "#FFFFFF",
+                    data: y_axis
+                }],
+            }
+        });
+    </script>
+</body>
+</html>
